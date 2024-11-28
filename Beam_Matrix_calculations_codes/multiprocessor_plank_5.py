@@ -1,0 +1,46 @@
+import threading
+import subprocess
+
+def run_script(script_name,argument):
+   subprocess.run(["python3", script_name,str(argument)])
+
+p456_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",456))
+p457_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",457))
+p459_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",459))
+p461_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",461))
+p464_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",464))
+p469_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",469))
+p474_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",474))
+p477_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",477))
+p479_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",479))
+p481_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",481))
+p483_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",483))
+p486_thread = threading.Thread(target=run_script, args=("Planck_elliptical_multiprocess.py",486))
+
+p456_thread.start()
+p457_thread.start()
+p459_thread.start()
+p461_thread.start()
+p464_thread.start()
+p469_thread.start()
+p474_thread.start()
+p477_thread.start()
+p479_thread.start()
+p481_thread.start()
+p483_thread.start()
+p486_thread.start()
+
+p456_thread.join()
+p457_thread.join()
+p459_thread.join()
+p461_thread.join()
+p464_thread.join()
+p469_thread.join()
+p474_thread.join()
+p477_thread.join()
+p479_thread.join()
+p481_thread.join()
+p483_thread.join()
+p486_thread.join()
+
+print("All the processes has been finished executing.")
